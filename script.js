@@ -4,21 +4,6 @@ const scoreBoard = document.getElementById('score')
 
 const table = document.getElementsByClassName('grid-board')
 let playerTurn = 0
-const boxes = document.querySelectorAll('.grid')
-
-boxes.forEach((box) => {
-  box.addEventListener('click', (makeMove) => {
-    if (playerTurn % 2 === 1) {
-      scoreBoard.innerHTML = "Player 2's Turn"
-      box.setAttribute('class', 'red')
-      playerTurn++
-    } else if (playerTurn > 0 && playerTurn % 2 === 0) {
-      scoreBoard.innerText = "Player 1's Turn"
-      box.setAttribute('class', 'yellow')
-      playerTurn++
-    }
-  })
-})
 
 const startGame = () => {
   playerTurn++
@@ -84,3 +69,34 @@ const winningCombination = [
   [45, 37, 29, 21],
   [45, 39, 33, 27]
 ]
+for (let i = 0; i < winningCombination.length; i++) {
+  winningCombination[i] = NaN
+}
+
+const createBoard = () => {
+  for (let i = 0; i < 49; i++) {
+    const squares = document.createElement('div')
+    squares.className = 'grid'
+    squares.id = 'index' + i
+    document.querySelector('div').appendChild(squares)
+  }
+}
+
+createBoard()
+
+const boxes = document.querySelectorAll('.grid')
+console.log(boxes)
+
+boxes.forEach((box) => {
+  box.addEventListener('click', (makeMove) => {
+    if (playerTurn % 2 === 1) {
+      scoreBoard.innerHTML = "Player 2's Turn"
+      box.setAttribute('class', 'red')
+      playerTurn++
+    } else if (playerTurn > 0 && playerTurn % 2 === 0) {
+      scoreBoard.innerText = "Player 1's Turn"
+      box.setAttribute('class', 'yellow')
+      playerTurn++
+    }
+  })
+})
