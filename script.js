@@ -69,9 +69,6 @@ const winningCombination = [
   [45, 37, 29, 21],
   [45, 39, 33, 27]
 ]
-for (let i = 0; i < winningCombination.length; i++) {
-  winningCombination[i] = NaN
-}
 
 const createBoard = () => {
   for (let i = 0; i < 49; i++) {
@@ -85,7 +82,6 @@ const createBoard = () => {
 createBoard()
 
 const boxes = document.querySelectorAll('.grid')
-console.log(boxes)
 
 boxes.forEach((box) => {
   box.addEventListener('click', (makeMove) => {
@@ -93,10 +89,37 @@ boxes.forEach((box) => {
       scoreBoard.innerHTML = "Player 2's Turn"
       box.setAttribute('class', 'red')
       playerTurn++
+      checkWinner()
     } else if (playerTurn > 0 && playerTurn % 2 === 0) {
       scoreBoard.innerText = "Player 1's Turn"
       box.setAttribute('class', 'yellow')
       playerTurn++
+      checkWinner()
     }
   })
 })
+
+function checkWinner() {
+  for (let i = 0; i < winningCombination.length; i++) {
+    const combo = winningCombination[i]
+    const boxOne = boxes[combo[0]]
+    const boxTwo = boxes[combo[1]]
+    const boxThree = boxes[combo[2]]
+    const boxFour = boxes[combo[3]]
+    if (
+      boxOne.classList.contains('red') &&
+      boxTwo.classList.contains('red') &&
+      boxThree.classList.contains('red') &&
+      boxFour.classList.contains('red')
+    ) {
+      alert(`Winner Player 1`)
+    } else if (
+      boxOne.classList.contains('yellow') &&
+      boxTwo.classList.contains('yellow') &&
+      boxThree.classList.contains('yellow') &&
+      boxFour.classList.contains('yellow')
+    ) {
+      alert('Winner Player 2')
+    }
+  }
+}
