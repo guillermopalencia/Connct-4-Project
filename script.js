@@ -146,6 +146,7 @@ function checkWinner() {
       boxThree.classList.contains('red') &&
       boxFour.classList.contains('red')
     ) {
+      document.querySelector('.replay').style.opacity = 1
       redWins()
       endGame()
       replay()
@@ -156,6 +157,7 @@ function checkWinner() {
       boxThree.classList.contains('yellow') &&
       boxFour.classList.contains('yellow')
     ) {
+      document.querySelector('.replay').style.opacity = 1
       yellowWins()
       endGame()
       replay()
@@ -192,7 +194,9 @@ const replay = () => {
       boxes[i].style.width = '65px'
       boxes[i].style.height = '65px'
       boxes[i].style.margin = 'auto'
-      playerTurn += 1
+      playerTurn = 1
+      scoreBoard.innerText = "Player 1's Turn"
+      newBut.style.opacity = 0
     }
     whoWon.style.opacity = 0
     remove(newBut)
