@@ -5,6 +5,8 @@ const scoreBoard = document.getElementById('score')
 const table = document.getElementsByClassName('grid-board')
 let playerTurn = 0
 
+const whoWon = document.querySelector('.winner')
+
 const startGame = () => {
   playerTurn++
   document.getElementById('score').style.opacity = 1
@@ -144,6 +146,7 @@ function checkWinner() {
       boxThree.classList.contains('red') &&
       boxFour.classList.contains('red')
     ) {
+      redWins()
       endGame()
       // alert(`Winner Player 1`)
     } else if (
@@ -152,6 +155,7 @@ function checkWinner() {
       boxThree.classList.contains('yellow') &&
       boxFour.classList.contains('yellow')
     ) {
+      yellowWins()
       endGame()
       // alert('Winner Player 2')
     }
@@ -162,4 +166,14 @@ const endGame = () => {
   for (let i = 0; i < boxes.length; i++) {
     boxes[i].classList.add('taken')
   }
+}
+
+const redWins = () => {
+  whoWon.innerText = 'Player 1 Wins!'
+  whoWon.style.opacity = 1
+}
+
+const yellowWins = () => {
+  whoWon.innerText = 'Player 2 Wins!'
+  whoWon.style.opacity = 1
 }
