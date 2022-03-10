@@ -1,6 +1,6 @@
 const gameOver = NaN
 
-const scoreBoard = document.getElementById('score')
+const scoreBoard = document.getElementById('details')
 
 const table = document.getElementsByClassName('grid-board')
 let playerTurn = 0
@@ -9,7 +9,7 @@ const whoWon = document.querySelector('.winner')
 
 const startGame = () => {
   playerTurn++
-  document.querySelector('#score').style.opacity = 1
+  document.querySelector('#details').style.opacity = 1
   document.querySelector('.startGame').style.opacity = 0
 }
 
@@ -206,6 +206,11 @@ const replay = () => {
 
 function changePage() {
   window.location.href = 'mains.html'
-  playerTurn++
-  document.querySelector('#score').style.opacity = 1
+}
+
+function lightMode() {
+  document.querySelector('body').style.backgroundColor = 'rgb(87, 174, 255)'
+}
+function darkMode() {
+  document.querySelector('body').style.backgroundColor = 'black'
 }
