@@ -107,7 +107,7 @@ const winningCombination = [
 const createBoard = () => {
   for (let i = 0; i < 49; i++) {
     const squares = document.createElement('div')
-    squares.className = 'grid'
+    squares.classList = 'grid white'
     squares.id = 'index' + i
     document.querySelector('div').appendChild(squares)
   }
@@ -148,6 +148,7 @@ function checkWinner() {
     ) {
       redWins()
       endGame()
+      replay()
       // alert(`Winner Player 1`)
     } else if (
       boxOne.classList.contains('yellow') &&
@@ -157,6 +158,7 @@ function checkWinner() {
     ) {
       yellowWins()
       endGame()
+      replay()
       // alert('Winner Player 2')
     }
   }
@@ -176,4 +178,23 @@ const redWins = () => {
 const yellowWins = () => {
   whoWon.innerText = 'Player 2 Wins!'
   whoWon.style.opacity = 1
+}
+
+const replay = () => {
+  const newBut = document.querySelector('.replay')
+  newBut.addEventListener('click', (playAgain) => {
+    for (let i = 0; i < boxes.length; i++) {
+      boxes[i].classList.remove('taken')
+      boxes[i].classList.remove('red')
+      boxes[i].classList.remove('yellow')
+      boxes[i].classList.add('white')
+      boxes[i].style.borderRadius = '50%'
+      boxes[i].style.width = '65px'
+      boxes[i].style.height = '65px'
+      boxes[i].style.margin = 'auto'
+      playerTurn += 1
+    }
+    whoWon.style.opacity = 0
+    remove(newBut)
+  })
 }
