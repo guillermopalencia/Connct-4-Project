@@ -67,7 +67,39 @@ const winningCombination = [
   [38, 30, 22, 14],
   [38, 32, 26, 20],
   [45, 37, 29, 21],
-  [45, 39, 33, 27]
+  [45, 39, 33, 27],
+  [8, 9, 10, 11],
+  [9, 10, 11, 12],
+  [15, 16, 17, 18],
+  [16, 17, 18, 19],
+  [29, 30, 31, 32],
+  [30, 31, 32, 33],
+  [31, 32, 33, 34],
+  [36, 37, 38, 39],
+  [37, 38, 39, 40],
+  [28, 29, 30, 31],
+  [43, 44, 45, 46],
+  [44, 45, 46, 47],
+  [7, 14, 21, 28],
+  [8, 15, 22, 29],
+  [9, 16, 23, 30],
+  [11, 18, 25, 32],
+  [12, 19, 26, 33],
+  [13, 20, 27, 34],
+  [14, 21, 28, 35],
+  [15, 22, 29, 36],
+  [16, 23, 30, 37],
+  [18, 25, 32, 39],
+  [19, 26, 33, 40],
+  [20, 27, 34, 41],
+  [11, 17, 23, 29],
+  [12, 18, 24, 30],
+  [8, 16, 24, 32],
+  [9, 17, 25, 33],
+  [15, 23, 31, 39],
+  [16, 23, 32, 40],
+  [18, 24, 30, 36],
+  [19, 25, 31, 37]
 ]
 
 const createBoard = () => {
@@ -112,14 +144,18 @@ function checkWinner() {
       boxThree.classList.contains('red') &&
       boxFour.classList.contains('red')
     ) {
-      alert(`Winner Player 1`)
+      // alert(`Winner Player 1`)
+      console.log(combo)
+      console.log(winningCombination[i])
     } else if (
       boxOne.classList.contains('yellow') &&
       boxTwo.classList.contains('yellow') &&
       boxThree.classList.contains('yellow') &&
       boxFour.classList.contains('yellow')
     ) {
-      alert('Winner Player 2')
+      // alert('Winner Player 2')
+      console.log(combo)
+      console.log('break')
     }
   }
 }
