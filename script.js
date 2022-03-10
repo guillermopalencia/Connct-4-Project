@@ -9,7 +9,8 @@ const whoWon = document.querySelector('.winner')
 
 const startGame = () => {
   playerTurn++
-  document.getElementById('score').style.opacity = 1
+  document.querySelector('#score').style.opacity = 1
+  document.querySelector('.startGame').style.opacity = 0
 }
 
 const winningCombination = [
@@ -201,4 +202,10 @@ const replay = () => {
     whoWon.style.opacity = 0
     remove(newBut)
   })
+}
+
+function changePage() {
+  window.location.href = 'mains.html'
+  playerTurn++
+  document.querySelector('#score').style.opacity = 1
 }

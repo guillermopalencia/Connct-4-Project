@@ -53,6 +53,8 @@ add image
 
 #### **_Credits_**
 
+https://stackoverflow.com/questions/24903148/navigate-between-html-files
+
 ##### Funny Images: [DuckDuckGo Search](duckduckgo.com)
 
 ##### Markdown Guide: [ia.net](https://ia.net/writer/support/general/markdown-guide)
