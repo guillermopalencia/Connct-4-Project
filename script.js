@@ -210,7 +210,9 @@ function changePage() {
 
 function lightMode() {
   document.querySelector('body').style.backgroundColor = 'rgb(87, 174, 255)'
+  whoWon.style.backgroundColor = 'rgb(87, 174, 255)'
 }
 function darkMode() {
   document.querySelector('body').style.backgroundColor = 'black'
+  whoWon.style.backgroundColor = 'black'
 }
