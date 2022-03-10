@@ -119,12 +119,12 @@ boxes.forEach((box) => {
   box.addEventListener('click', (makeMove) => {
     if (playerTurn % 2 === 1) {
       scoreBoard.innerHTML = "Player 2's Turn"
-      box.setAttribute('class', 'red')
+      box.setAttribute('class', 'red taken')
       playerTurn++
       checkWinner()
     } else if (playerTurn > 0 && playerTurn % 2 === 0) {
       scoreBoard.innerText = "Player 1's Turn"
-      box.setAttribute('class', 'yellow')
+      box.setAttribute('class', 'yellow taken')
       playerTurn++
       checkWinner()
     }
@@ -144,18 +144,22 @@ function checkWinner() {
       boxThree.classList.contains('red') &&
       boxFour.classList.contains('red')
     ) {
+      endGame()
       // alert(`Winner Player 1`)
-      console.log(combo)
-      console.log(winningCombination[i])
     } else if (
       boxOne.classList.contains('yellow') &&
       boxTwo.classList.contains('yellow') &&
       boxThree.classList.contains('yellow') &&
       boxFour.classList.contains('yellow')
     ) {
+      endGame()
       // alert('Winner Player 2')
-      console.log(combo)
-      console.log('break')
     }
+  }
+}
+
+const endGame = () => {
+  for (let i = 0; i < boxes.length; i++) {
+    boxes[i].classList.add('taken')
   }
 }
