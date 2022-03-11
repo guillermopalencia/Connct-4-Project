@@ -50,7 +50,7 @@
 .winner {
   position: absolute;
   top: 90px;
-  left: 440px;
+  left: 490px;
   font-size: 70px;
   color: white;
   background-color: rgb(87, 174, 255);
@@ -60,8 +60,7 @@
   opacity: 0;
   margin-bottom: 10px;
   margin-top: 55px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Hubballi', cursive;
 }
 
 h1 {
@@ -97,8 +96,7 @@ body {
   text-align: center;
   color: white;
   font-size: 40px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Hubballi', cursive;
 }
 
 img {
@@ -164,7 +162,7 @@ img {
 }
 
 .main {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Hubballi', cursive;
 }
 
 .rGlow {
