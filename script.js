@@ -236,10 +236,12 @@ const keepScore = () => {
   if (redScore > 0) {
     const newRed = document.createElement('div')
     newRed.classList.add('red')
+    newRed.classList.add('rGlow')
     document.querySelector('.scoreRed').appendChild(newRed)
   } else if (yellowScore > 0) {
     const newYellow = document.createElement('div')
     newYellow.classList.add('yellow')
+    newYellow.classList.add('yGlow')
     document.querySelector('.scoreYellow').appendChild(newYellow)
   }
 }
