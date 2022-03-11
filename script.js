@@ -108,7 +108,7 @@ const winningCombination = [
 const createBoard = () => {
   for (let i = 0; i < 49; i++) {
     const squares = document.createElement('div')
-    squares.classList = 'grid white'
+    squares.classList = 'grid empty'
     squares.id = 'index' + i
     document.querySelector('div').appendChild(squares)
   }
@@ -118,21 +118,42 @@ createBoard()
 
 const boxes = document.querySelectorAll('.grid')
 
-boxes.forEach((box) => {
-  box.addEventListener('click', (makeMove) => {
-    if (playerTurn % 2 === 1) {
-      scoreBoard.innerHTML = "Player 2's Turn"
-      box.setAttribute('class', 'red taken')
-      playerTurn++
-      checkWinner()
-    } else if (playerTurn > 0 && playerTurn % 2 === 0) {
-      scoreBoard.innerText = "Player 1's Turn"
-      box.setAttribute('class', 'yellow taken')
-      playerTurn++
-      checkWinner()
+for (let i = 0; i < boxes.length; i++) {
+  boxes[i].addEventListener('click', (makeMove) => {
+    let checkGrid = i + 7
+    if (i < 42) {
+      if (boxes[checkGrid].classList.contains('taken')) {
+        if (playerTurn % 2 === 1) {
+          scoreBoard.innerHTML = "Player 2's Turn"
+          boxes[i].setAttribute('class', 'red taken')
+          playerTurn++
+          checkWinner()
+          console.log(playerTurn)
+        } else if (playerTurn % 2 === 0) {
+          scoreBoard.innerText = "Player 1's Turn"
+          boxes[i].setAttribute('class', 'yellow taken')
+          playerTurn++
+          checkWinner()
+        }
+      }
+    } else {
+      if (!boxes[i].classList.contains('taken')) {
+        if (playerTurn % 2 === 1) {
+          scoreBoard.innerHTML = "Player 2's Turn"
+          boxes[i].setAttribute('class', 'red taken')
+          playerTurn++
+          checkWinner()
+          console.log(playerTurn)
+        } else if (playerTurn % 2 === 0) {
+          scoreBoard.innerText = "Player 1's Turn"
+          boxes[i].setAttribute('class', 'yellow taken')
+          playerTurn++
+          checkWinner()
+        }
+      }
     }
   })
-})
+}
 
 function checkWinner() {
   for (let i = 0; i < winningCombination.length; i++) {
@@ -151,7 +172,6 @@ function checkWinner() {
       redWins()
       endGame()
       replay()
-      // alert(`Winner Player 1`)
     } else if (
       boxOne.classList.contains('yellow') &&
       boxTwo.classList.contains('yellow') &&
@@ -162,7 +182,6 @@ function checkWinner() {
       yellowWins()
       endGame()
       replay()
-      // alert('Winner Player 2')
     }
   }
 }
@@ -190,7 +209,7 @@ const replay = () => {
       boxes[i].classList.remove('taken')
       boxes[i].classList.remove('red')
       boxes[i].classList.remove('yellow')
-      boxes[i].classList.add('white')
+      boxes[i].classList.add('empty')
       boxes[i].style.borderRadius = '50%'
       boxes[i].style.width = '65px'
       boxes[i].style.height = '65px'
@@ -216,3 +235,11 @@ function darkMode() {
   document.querySelector('body').style.backgroundColor = 'black'
   whoWon.style.backgroundColor = 'black'
 }
+
+// const checkTie = () => {
+//   for (let i = 0; i < boxes.length; i++) {
+//     if (boxes.classList.contains('taken')) {
+//       console.log('no winner')
+//     }
+//   }
+// }
