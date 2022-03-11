@@ -131,7 +131,6 @@ for (let i = 0; i < boxes.length; i++) {
           boxes[i].setAttribute('class', 'red taken')
           playerTurn++
           checkWinner()
-          console.log(playerTurn)
         } else if (playerTurn % 2 === 0) {
           scoreBoard.innerText = "Player 1's Turn"
           boxes[i].setAttribute('class', 'yellow taken')
@@ -146,7 +145,6 @@ for (let i = 0; i < boxes.length; i++) {
           boxes[i].setAttribute('class', 'red taken')
           playerTurn++
           checkWinner()
-          console.log(playerTurn)
         } else if (playerTurn % 2 === 0) {
           scoreBoard.innerText = "Player 1's Turn"
           boxes[i].setAttribute('class', 'yellow taken')

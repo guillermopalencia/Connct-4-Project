@@ -7,7 +7,7 @@
   margin: auto;
   margin-top: 20px;
   border-radius: 10%;
-  padding: 7px;
+  padding: 15px;
 }
 
 .grid {
@@ -73,8 +73,8 @@ body {
 
 .replay {
   position: absolute;
-  top: 500px;
-  left: 1170px;
+  top: 670px;
+  left: 1020px;
   padding: 10px;
   border-radius: 60%;
   background-color: green;
@@ -83,8 +83,8 @@ body {
 
 .startGame {
   position: absolute;
-  top: 500px;
-  left: 170px;
+  top: 700px;
+  left: 370px;
   font-size: 20px;
   padding: 10px;
   border-radius: 60%;

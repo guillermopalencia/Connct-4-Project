@@ -1,4 +1,4 @@
-# Snake Game JS
+# Connect 4 Game JS
 
 ## Date: 3/7/2022
 
@@ -8,7 +8,7 @@
 
 ---
 
-#### [GitHub]() | [FaceBook]() | [Slack]()
+#### [GitHub](https://github.com/guillermopalencia) | [LinkedIn](www.linkedin.com/in/guillermo-palencia-0772a3172)
 
 ---
 
@@ -18,45 +18,48 @@
 
 ---
 
-#### **_Best Rappers_**
+#### **_Resources Used_**
 
-- Kanye West
-- JID
-  - Kendrick Lamar
+- stackoverflow.com
+- www.w3schools.com/js/default.asp
+- css-tricks.com/snippets/css/a-guide-to-flexbox/
+- developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
 
 ---
 
-#### **_Getting Started_**
+### **_Getting Started_**
 
 ##### For those with little to no knowledge on the snake game, it is a very fun single player game. The premise of this game is to collect apples in a 17x17 grid while your snake increases in length for every apple. Running into yourself or the border of the grid will cause you to lose.
+
+#### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/qcRefxBX/project-1-connect-four).
+
+#### The project itself was deployed and can be viewed [here](https://guillermos-connect4.surge.sh/).
 
 ---
 
 #### **_Screenshots_**
 
-##### SS 1
+Game Version 1:
 
-add image
+<img src="https://i.imgur.com/tNbCDMR.png" width="200" alt="v1">
 
-##### SS 2
+#### Finished Game:
 
-## add image
+![Game](https://i.imgur.com/4ehPV2e.png)
 
 #### **_Future Projects_**
 
-- [ ] Kendrick Lamar
-- [ ] Saba
-- [x] JID
-- [x] ~~Denzel Curry~~ Kanye West
+- [ ] Add tile falling animation.
+- [ ] Add onmouseover features
+- [x] glow effect
+- [x] scoreBoard
 
 ---
 
 #### **_Credits_**
 
+##### HTML Navigation:
+
 https://stackoverflow.com/questions/24903148/navigate-between-html-files
 
-##### Funny Images: [DuckDuckGo Search](duckduckgo.com)
-
-##### Markdown Guide: [ia.net](https://ia.net/writer/support/general/markdown-guide)
-
-##### Markdown Cheatsheet: [GitHub](https://guides.github.com/pdfs/markdown-cheatsheet-online.pdf)
+##### Connect 4 Picture: [Fun Games](https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.funpages.com%2Fgames%2Fconnect4%2F&psig=AOvVaw2pgGYQup9bz2PTEClCUKEy&ust=1647101956468000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCLDhxpS7vvYCFQAAAAAdAAAAABAD)
