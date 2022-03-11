@@ -13,13 +13,17 @@
   <h1 class="winner"></h1>
 </header>
 <body>
-  <h1 id="details"> Player 1 Goes First! <br> Player 1 is red Player 2 is Yellow. </h1>
+  <h1 id="details" class="main"> Player 1 Goes First! <br> Player 1 is red Player 2 is Yellow. </h1>
   <div class="grid-board">
   </div>
+  <h1 class="redHere main"> Red Wins: </h1>
+  <h1 class="yellowHere main"> Yellow Wins: </h1>
   <button class="startGame" onclick="startGame()"> Start </button>
   <button class="replay">Play Again</button>
   <button class="whiten" onclick="lightMode()">Light Mode</button>
   <button class="blacken" onclick="darkMode()">Dark Mode</button>
+  <div class="scoreRed"></div>
+  <div class="scoreYellow"></div>
 </body>
 </html>
 

@@ -13,6 +13,9 @@ const startGame = () => {
   document.querySelector('.startGame').style.opacity = 0
 }
 
+let redScore = 0
+let yellowScore = 0
+
 const winningCombination = [
   [0, 1, 2, 3],
   [0, 7, 14, 21],
@@ -169,8 +172,10 @@ function checkWinner() {
       boxFour.classList.contains('red')
     ) {
       document.querySelector('.replay').style.opacity = 1
+      redScore++
       redWins()
       endGame()
+      keepScore()
       replay()
     } else if (
       boxOne.classList.contains('yellow') &&
@@ -179,8 +184,10 @@ function checkWinner() {
       boxFour.classList.contains('yellow')
     ) {
       document.querySelector('.replay').style.opacity = 1
+      yellowScore++
       yellowWins()
       endGame()
+      keepScore()
       replay()
     }
   }
@@ -215,6 +222,8 @@ const replay = () => {
       boxes[i].style.height = '65px'
       boxes[i].style.margin = 'auto'
       playerTurn = 1
+      redScore = 0
+      yellowScore = 0
       scoreBoard.innerText = "Player 1's Turn"
       newBut.style.opacity = 0
     }
@@ -223,6 +232,17 @@ const replay = () => {
   })
 }
 
+const keepScore = () => {
+  if (redScore > 0) {
+    const newRed = document.createElement('div')
+    newRed.classList.add('red')
+    document.querySelector('.scoreRed').appendChild(newRed)
+  } else if (yellowScore > 0) {
+    const newYellow = document.createElement('div')
+    newYellow.classList.add('yellow')
+    document.querySelector('.scoreYellow').appendChild(newYellow)
+  }
+}
 function changePage() {
   window.location.href = 'mains.html'
 }
@@ -235,11 +255,3 @@ function darkMode() {
   document.querySelector('body').style.backgroundColor = 'black'
   whoWon.style.backgroundColor = 'black'
 }
-
-// const checkTie = () => {
-//   for (let i = 0; i < boxes.length; i++) {
-//     if (boxes.classList.contains('taken')) {
-//       console.log('no winner')
-//     }
-//   }
-// }

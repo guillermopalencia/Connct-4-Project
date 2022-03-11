@@ -130,3 +130,39 @@ img {
   background-color: black;
   color: white;
 }
+
+.scoreRed {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  position: absolute;
+  top: 400px;
+  left: 100px;
+}
+
+.scoreYellow {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  position: absolute;
+  top: 400px;
+  left: 1050px;
+}
+
+.redHere {
+  position: absolute;
+  text-decoration: underline;
+  top: 330px;
+  left: 170px;
+}
+
+.yellowHere {
+  position: absolute;
+  text-decoration: underline;
+  top: 330px;
+  left: 1110px;
+}
+
+.main {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
