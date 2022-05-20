@@ -29,7 +29,7 @@
 
 ### **_Getting Started_**
 
-##### For those with little to no knowledge on the snake game, it is a very fun single player game. The premise of this game is to collect apples in a 17x17 grid while your snake increases in length for every apple. Running into yourself or the border of the grid will cause you to lose.
+##### For those with little to no knowledge on Connect Four, it is a two player game where both players take turns dropping their colored tiles into a grid. In order to win you have to get 4 in a row of your tile color in any direction.
 
 #### A Trello board was used to keep track of development progress and can be viewed [here](https://trello.com/b/qcRefxBX/project-1-connect-four).
 
